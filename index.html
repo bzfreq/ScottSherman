@@ -6,7 +6,7 @@
   <title>Scotty Sherman | Stand-Up</title>
 
   <meta name="description"
-        content="Scotty Sherman — avant-garde stand-up with a beautiful meltdown. Now playing at John & Peter’s, New Hope, PA." />
+        content="Scotty Sherman — avant-garde stand-up with a beautifully pathetic delivery. Now playing at John & Peter’s, New Hope, PA." />
 
   <style>
     :root{
@@ -34,48 +34,31 @@
         linear-gradient(180deg,var(--bg0),var(--bg1));
     }
 
-    .wrap{
-      max-width:1100px;
-      margin:auto;
-      padding:28px 18px 60px;
-    }
+    .wrap{max-width:1120px;margin:auto;padding:28px 18px 70px}
 
     .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding:14px 18px;
-      border-radius:999px;
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+      padding:14px 18px;border-radius:999px;
       background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.16);
       box-shadow:0 18px 60px rgba(0,0,0,.35);
     }
 
     .pill{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:12px;
-      font-weight:800;
-      letter-spacing:.1em;
-      text-transform:uppercase;
+      display:flex;align-items:center;gap:10px;
+      font-size:12px;font-weight:800;
+      letter-spacing:.1em;text-transform:uppercase;
     }
 
     .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
+      width:10px;height:10px;border-radius:50%;
       background:var(--b);
       box-shadow:0 0 22px var(--b);
     }
 
     .btn{
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      color:#fff;
-      font-weight:700;
+      padding:10px 14px;border-radius:999px;
+      text-decoration:none;color:#fff;font-weight:700;
       border:1px solid rgba(255,255,255,.2);
       background:rgba(255,255,255,.08);
     }
@@ -86,10 +69,8 @@
     }
 
     .hero{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:20px;
-      margin-top:22px;
+      display:grid;grid-template-columns:1.15fr .85fr;
+      gap:22px;margin-top:24px;
     }
 
     @media(max-width:900px){
@@ -101,7 +82,7 @@
       border:1px solid rgba(255,255,255,.16);
       background:rgba(255,255,255,.06);
       box-shadow:var(--shadow);
-      padding:22px;
+      padding:24px;
     }
 
     h1{
@@ -118,26 +99,38 @@
     .tagline{
       margin-top:12px;
       font-size:18px;
-      color:#fff;
-      max-width:60ch;
+      max-width:62ch;
     }
 
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:16px;
-    }
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
 
     .chip{
-      padding:8px 12px;
-      border-radius:999px;
+      padding:8px 12px;border-radius:999px;
       border:1px solid rgba(255,255,255,.2);
       background:rgba(0,0,0,.25);
+      font-size:12px;font-weight:800;
+      letter-spacing:.08em;text-transform:uppercase;
+    }
+
+    .section{
+      margin-top:22px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+    }
+
+    .section h3{
+      margin:0 0 8px;
       font-size:12px;
-      font-weight:800;
-      letter-spacing:.08em;
+      letter-spacing:.12em;
       text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .section p{
+      margin:0;
+      font-size:15px;
+      line-height:1.5;
+      max-width:64ch;
     }
 
     .scene{
@@ -150,30 +143,21 @@
     }
 
     .photo{
-      height:420px;
-      border-radius:18px;
-      overflow:hidden;
+      height:430px;border-radius:18px;overflow:hidden;
       border:1px solid rgba(255,255,255,.2);
       box-shadow:0 30px 90px rgba(0,0,0,.45);
       position:relative;
     }
 
     .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+      width:100%;height:100%;object-fit:cover;display:block;
     }
 
     .badge{
-      position:absolute;
-      bottom:14px;
-      left:14px;
-      padding:10px 12px;
-      border-radius:999px;
+      position:absolute;bottom:14px;left:14px;
+      padding:10px 12px;border-radius:999px;
       background:rgba(0,0,0,.45);
-      font-size:12px;
-      font-weight:900;
+      font-size:12px;font-weight:900;
       border:1px solid rgba(255,255,255,.2);
     }
 
@@ -183,8 +167,19 @@
       color:transparent;
     }
 
+    .booking{
+      margin-top:34px;
+      text-align:center;
+    }
+
+    .booking p{
+      margin:0 auto 14px;
+      max-width:60ch;
+      color:var(--muted);
+    }
+
     .footer{
-      margin-top:20px;
+      margin-top:28px;
       text-align:center;
       font-size:12px;
       color:var(--muted);
@@ -199,7 +194,7 @@
       <div class="pill"><span class="dot"></span> Live, awkward, & dangerously sincere</div>
       <div>
         <a class="btn" href="#dates">Dates</a>
-        <a class="btn primary" href="#contact">Book Scotty</a>
+        <a class="btn primary" href="#booking">Book Scotty</a>
       </div>
     </div>
 
@@ -209,7 +204,7 @@
         <h1>Scotty<br>Sherman</h1>
 
         <p class="tagline">
-          Avant-garde stand-up with a <strong>beautiful meltdown</strong>.
+          Avant-garde stand-up with a <strong>beautifully pathetic delivery</strong>.
           Long pauses. Wrong turns. Sudden sincerity.
         </p>
 
@@ -220,6 +215,31 @@
           <span class="chip">Painfully Honest</span>
         </div>
 
+        <div class="section">
+          <h3>About</h3>
+          <p>
+            Scotty Sherman blends stand-up, performance art, and emotional misfires
+            into a set that feels half-confessional, half-hostage situation.
+            The comedy lives in discomfort — and in committing fully to it.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Style</h3>
+          <p>
+            Expect long silences, sudden sincerity, and moments that feel like
+            they might collapse — until they don’t. Scotty doesn’t chase punchlines;
+            he lets the audience sit in the tension.
+          </p>
+        </div>
+
+        <div class="section">
+          <h3>Performed In</h3>
+          <p>
+            Los Angeles • Philadelphia • Newtown • New Hope
+          </p>
+        </div>
+
         <div id="dates" class="scene">
           Now playing at <b>John &amp; Peter’s</b> — New Hope, PA • Mondays • 9:00 PM
         </div>
@@ -227,17 +247,24 @@
 
       <div class="card">
         <div class="photo">
-          <!-- IMAGE PATH IS CORRECT -->
-          <img src="./lovablescott.jpeg"
-               alt="Scotty Sherman stand-up comedian" />
+          <img src="./lovablescott.jpeg" alt="Scotty Sherman stand-up comedian" />
           <div class="badge"><b>SCOTTY</b> • LIVE • NEW HOPE</div>
         </div>
       </div>
 
     </section>
 
-    <div id="contact" class="footer">
-      Booking inquiries: add email or form here.
+    <div id="booking" class="booking">
+      <h3 style="letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--muted);">
+        Booking
+      </h3>
+      <p>
+        Available for clubs, alternative rooms, showcases, and events
+        that value originality and risk.
+      </p>
+      <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">
+        Book Scotty
+      </a>
     </div>
 
     <div class="footer">
