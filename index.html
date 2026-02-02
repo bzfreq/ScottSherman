@@ -1,10 +1,4 @@
- <!--
-SCOTTY SHERMAN — ONE-PAGE COMEDIAN BIO (FLASHY, AVANT-GARDE)
-Save as: index.html
-Replace scott.jpg with your real photo filename (same folder) OR paste an image URL.
--->
-
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -19,495 +13,190 @@ Replace scott.jpg with your real photo filename (same folder) OR paste an image 
       --ink:#f5f7ff;
       --muted:rgba(245,247,255,.75);
       --muted2:rgba(245,247,255,.55);
-
-      --a:#00f5ff;   /* cyan */
-      --b:#ff2bd6;   /* hot pink */
-      --c:#ffe94a;   /* neon yellow */
-      --d:#7c4dff;   /* violet */
-      --e:#30ff78;   /* neon green */
-
-      --glass: rgba(255,255,255,.06);
-      --stroke: rgba(255,255,255,.14);
+      --a:#00f5ff;
+      --b:#ff2bd6;
+      --c:#ffe94a;
+      --e:#30ff78;
       --shadow: 0 30px 90px rgba(0,0,0,.55);
       --radius: 22px;
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--ink);
       background:
-        radial-gradient(1200px 900px at 15% 10%, rgba(255,43,214,.16) 0%, rgba(255,43,214,0) 60%),
-        radial-gradient(1200px 900px at 90% 20%, rgba(0,245,255,.14) 0%, rgba(0,245,255,0) 55%),
-        radial-gradient(900px 800px at 65% 95%, rgba(48,255,120,.12) 0%, rgba(48,255,120,0) 55%),
+        radial-gradient(1200px 900px at 15% 10%, rgba(255,43,214,.16), transparent 60%),
+        radial-gradient(1200px 900px at 90% 20%, rgba(0,245,255,.14), transparent 55%),
         linear-gradient(180deg, var(--bg0), var(--bg1));
-      overflow-x:hidden;
     }
 
-    /* animated “laser haze” */
-    .haze{
-      position:fixed; inset:-40px;
-      background:
-        conic-gradient(from 140deg at 55% 45%,
-          rgba(0,245,255,.12),
-          rgba(255,43,214,.12),
-          rgba(255,233,74,.10),
-          rgba(124,77,255,.10),
-          rgba(48,255,120,.10),
-          rgba(0,245,255,.12)
-        );
-      filter: blur(44px) saturate(140%);
-      opacity:.35;
-      animation: drift 14s ease-in-out infinite alternate;
-      pointer-events:none;
-      z-index:-1;
-    }
-    @keyframes drift{
-      0%{transform:translate3d(-2%, -1%, 0) rotate(-6deg) scale(1.05)}
-      100%{transform:translate3d(2%, 1%, 0) rotate(6deg) scale(1.10)}
-    }
-
-    .wrap{
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-    }
+    .wrap{max-width:1100px;margin:auto;padding:28px 18px 60px}
 
     .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding: 14px 16px;
-      border:1px solid var(--stroke);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border-radius: 999px;
-      box-shadow: 0 18px 60px rgba(0,0,0,.30);
-      backdrop-filter: blur(10px);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 18px;border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.15);
+      box-shadow:0 18px 60px rgba(0,0,0,.3);
     }
 
     .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      font-size: 12px;
-      color: rgba(245,247,255,.9);
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(0,0,0,.20);
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-      user-select:none;
-      white-space:nowrap;
+      font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+      display:flex;gap:10px;align-items:center;
     }
 
     .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: radial-gradient(circle at 35% 30%, #fff 0%, var(--b) 35%, rgba(255,43,214,.0) 72%);
-      box-shadow:
-        0 0 22px rgba(255,43,214,.7),
-        0 0 50px rgba(0,245,255,.15);
+      width:10px;height:10px;border-radius:50%;
+      background:var(--b);
+      box-shadow:0 0 20px var(--b);
     }
 
-    .ctaRow{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;
-    }
     .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.06);
-      color: var(--ink);
-      text-decoration:none;
-      font-weight:700;
-      letter-spacing:.02em;
-      box-shadow: 0 18px 60px rgba(0,0,0,.30);
-      backdrop-filter: blur(10px);
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      padding:10px 14px;border-radius:999px;
+      text-decoration:none;color:#fff;font-weight:700;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
     }
-    .btn:hover{transform: translateY(-2px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.28)}
-    .btn:active{transform: translateY(0px) scale(.99)}
+
     .btn.primary{
-      border-color: rgba(0,245,255,.55);
-      background: linear-gradient(90deg, rgba(0,245,255,.18), rgba(255,43,214,.14));
-      box-shadow:
-        0 24px 80px rgba(0,245,255,.12),
-        0 24px 80px rgba(255,43,214,.12);
+      border-color:var(--a);
+      background:linear-gradient(90deg, rgba(0,245,255,.25), rgba(255,43,214,.18));
     }
 
     .hero{
-      margin-top: 22px;
       display:grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap: 18px;
-      align-items: stretch;
+      grid-template-columns:1.1fr .9fr;
+      gap:20px;
+      margin-top:22px;
     }
 
-    @media (max-width: 920px){
-      .hero{grid-template-columns: 1fr; }
-      .ctaRow{justify-content:flex-start}
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
     }
 
     .card{
-      position:relative;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255,255,255,.16);
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-      overflow:hidden;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.06);
+      box-shadow:var(--shadow);
+      padding:22px;
     }
 
-    .card::before{
-      content:"";
-      position:absolute; inset:-1px;
-      background:
-        radial-gradient(600px 240px at 20% 10%, rgba(0,245,255,.22), rgba(0,245,255,0) 60%),
-        radial-gradient(640px 300px at 80% 20%, rgba(255,43,214,.20), rgba(255,43,214,0) 60%),
-        radial-gradient(600px 320px at 50% 105%, rgba(255,233,74,.12), rgba(255,233,74,0) 60%);
-      opacity:.9;
-      pointer-events:none;
-    }
-
-    .cardInner{ position:relative; padding: 22px; }
-
-    .name{
-      margin: 0;
-      font-weight: 1000;
-      font-size: clamp(44px, 6.2vw, 78px);
-      line-height: .95;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, var(--c), var(--b), var(--a));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow:
-        0 0 20px rgba(255,43,214,.22),
-        0 0 34px rgba(0,245,255,.18);
-    }
-
-    .tagline{
-      margin: 10px 0 0;
-      font-size: 18px;
-      color: rgba(245,247,255,.9);
-      max-width: 62ch;
-    }
-
-    .tagline strong{
-      color: #fff;
-      text-shadow: 0 0 18px rgba(0,245,255,.18);
-    }
-
-    .chips{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top: 16px;
-    }
-
-    .chip{
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.18);
-      color: rgba(245,247,255,.92);
-      font-weight: 800;
-      font-size: 12px;
-      letter-spacing:.08em;
-      text-transform: uppercase;
-    }
-
-    .split{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    @media (max-width: 640px){
-      .split{grid-template-columns:1fr}
-    }
-
-    .mini{
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.18);
-      padding: 14px 14px;
-    }
-
-    .mini h3{
-      margin:0 0 6px;
-      font-size: 12px;
-      letter-spacing:.12em;
-      text-transform: uppercase;
-      color: rgba(245,247,255,.82);
-    }
-    .mini p{
+    h1{
       margin:0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.45;
-    }
-
-    .sceneLine{
-      margin-top: 14px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(0,245,255,.28);
-      background: linear-gradient(90deg, rgba(0,245,255,.09), rgba(255,43,214,.06));
-      color: rgba(245,247,255,.92);
-      font-weight: 800;
-      letter-spacing:.02em;
-    }
-
-    .sceneLine em{font-style:normal; color:#fff}
-    .sceneLine span{color: rgba(245,247,255,.78); font-weight:700}
-
-    /* Photo panel */
-    .photoFrame{
-      height:100%;
-      min-height: 420px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding: 16px;
-      gap: 12px;
-    }
-
-    .photo{
-      position:relative;
-      flex: 1;
-      border-radius: 18px;
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,.14);
-      background:
-        radial-gradient(1200px 600px at 30% 20%, rgba(255,43,214,.20), rgba(255,43,214,0) 55%),
-        radial-gradient(900px 500px at 70% 30%, rgba(0,245,255,.18), rgba(0,245,255,0) 55%),
-        rgba(0,0,0,.25);
-      box-shadow: 0 30px 90px rgba(0,0,0,.45);
-    }
-
-    .photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform: scale(1.02);
-      filter: contrast(1.05) saturate(1.08);
-      opacity: .95;
-    }
-
-    /* neon frame overlay */
-    .photo::after{
-      content:"";
-      position:absolute; inset: 0;
-      background:
-        linear-gradient(135deg, rgba(255,233,74,.18), rgba(255,233,74,0) 40%),
-        linear-gradient(315deg, rgba(0,245,255,.18), rgba(0,245,255,0) 40%),
-        linear-gradient(45deg, rgba(255,43,214,.18), rgba(255,43,214,0) 45%);
-      mix-blend-mode: screen;
-      pointer-events:none;
-    }
-
-    .photoBadge{
-      position:absolute;
-      left: 14px; bottom: 14px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.40);
-      backdrop-filter: blur(10px);
-      font-weight: 900;
-      letter-spacing:.08em;
-      text-transform: uppercase;
-      font-size: 12px;
-      box-shadow: 0 16px 60px rgba(0,0,0,.35);
-    }
-
-    .photoBadge b{
-      background: linear-gradient(90deg, var(--e), var(--a));
+      font-size:clamp(44px,6vw,78px);
+      font-weight:1000;
+      letter-spacing:-.03em;
+      text-transform:uppercase;
+      background:linear-gradient(90deg,var(--c),var(--b),var(--a));
       -webkit-background-clip:text;
-      background-clip:text;
       color:transparent;
     }
 
-    .contact{
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.18);
-      padding: 14px;
+    .tagline{margin-top:12px;font-size:18px;color:#fff}
+
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .chip{
+      padding:8px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(0,0,0,.25);
+      font-size:12px;font-weight:800;text-transform:uppercase;
     }
 
-    .contact label{
-      display:block;
-      font-size: 12px;
-      letter-spacing:.12em;
-      text-transform: uppercase;
-      color: rgba(245,247,255,.80);
-      margin-bottom: 8px;
-      font-weight: 900;
+    .photo{
+      height:420px;border-radius:18px;overflow:hidden;
+      border:1px solid rgba(255,255,255,.2);
+      box-shadow:0 30px 90px rgba(0,0,0,.45);
+      position:relative;
     }
 
-    .contactForm{
-      display:grid;
-      gap: 10px;
+    .photo img{
+      width:100%;height:100%;object-fit:cover;
     }
 
-    .field{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
-      color: var(--ink);
-      outline: none;
-      font-weight: 650;
-    }
-    .field::placeholder{color: rgba(245,247,255,.45)}
-    .field:focus{
-      border-color: rgba(0,245,255,.50);
-      box-shadow: 0 0 0 4px rgba(0,245,255,.10);
+    .badge{
+      position:absolute;bottom:14px;left:14px;
+      padding:10px 12px;border-radius:999px;
+      background:rgba(0,0,0,.45);
+      font-size:12px;font-weight:900;
+      border:1px solid rgba(255,255,255,.2);
     }
 
-    .send{
-      cursor:pointer;
-      width: 100%;
-      justify-content:center;
+    .badge b{
+      background:linear-gradient(90deg,var(--e),var(--a));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .scene{
+      margin-top:18px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(0,245,255,.4);
+      background:rgba(0,245,255,.08);
+      font-weight:800;
     }
 
     .footer{
-      margin-top: 16px;
-      color: var(--muted2);
-      font-size: 12px;
+      margin-top:18px;
       text-align:center;
-    }
-
-    /* A subtle “flash” divider */
-    .divider{
-      margin-top: 18px;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,233,74,.65), rgba(255,43,214,.55), rgba(0,245,255,.55), rgba(255,255,255,0));
-      opacity:.75;
+      font-size:12px;
+      color:var(--muted2);
     }
   </style>
 </head>
 
 <body>
-  <div class="haze"></div>
-
   <div class="wrap">
+
     <div class="topbar">
       <div class="pill"><span class="dot"></span> Live, awkward, & dangerously sincere</div>
-
-      <div class="ctaRow">
+      <div>
         <a class="btn" href="#dates">Dates</a>
         <a class="btn primary" href="#contact">Book Scotty</a>
       </div>
     </div>
 
     <section class="hero">
-      <!-- LEFT: Bio / Info -->
+
       <div class="card">
-        <div class="cardInner">
-          <h1 class="name">Scotty<br>Sherman</h1>
+        <h1>Scotty<br>Sherman</h1>
+        <p class="tagline">
+          Avant-garde stand-up with a <strong>beautifully pathetic delivery</strong>.
+        </p>
 
-          <p class="tagline">
-            Avant-garde stand-up with a <strong>beautifully pathetic delivery</strong> —
-            equal parts meltdown, confession booth, and late-night dare.
-          </p>
+        <div class="chips">
+          <span class="chip">Bald + Beard Energy</span>
+          <span class="chip">Leather Jacket Aesthetic</span>
+          <span class="chip">Unrequested Audience Interaction</span>
+          <span class="chip">Painfully Honest</span>
+        </div>
 
-          <div class="chips">
-            <span class="chip">Bald + Beard Energy</span>
-            <span class="chip">Leather Jacket Aesthetic</span>
-            <span class="chip">Audience Participation (Unrequested)</span>
-            <span class="chip">“Do You Think I’m Funny?”</span>
-          </div>
-
-          <div class="split">
-            <div class="mini">
-              <h3>The Bit</h3>
-              <p>
-                Scotty weaponizes discomfort: long pauses, wrong turns, sudden sincerity.
-                It lands because he commits like it’s life or death.
-              </p>
-            </div>
-            <div class="mini">
-              <h3>The Resume</h3>
-              <p>
-                Performed across <b>Los Angeles</b>, <b>Philadelphia</b>, and <b>Newtown</b> —
-                with a style that feels like performance art pretending to be stand-up.
-              </p>
-            </div>
-          </div>
-
-          <div id="dates" class="sceneLine">
-            <em>Now playing exclusively</em>
-            <span> at </span>
-            <em>John &amp; Peter’s</em>
-            <span> — New Hope, Pennsylvania</span>
-            <span> • Mondays • 9:00 PM</span>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="split" style="margin-top:16px;">
-            <div class="mini">
-              <h3>Also seen</h3>
-              <p>
-                Karaoke believer. Havana’s across the street.
-                He treats it like Madison Square Garden. Nobody else does.
-              </p>
-            </div>
-            <div class="mini">
-              <h3>For fans of</h3>
-              <p>
-                Sad-clown honesty, anti-confidence, and comedy that dares you to look away.
-              </p>
-            </div>
-          </div>
+        <div id="dates" class="scene">
+          Now playing at <b>John &amp; Peter’s</b> — New Hope, PA • Mondays • 9PM
         </div>
       </div>
 
-      <!-- RIGHT: Photo + Contact -->
       <div class="card">
-        <div class="cardInner photoFrame">
-          <div class="photo">
-            <!-- Replace "scott.jpg" with your photo file or image URL -->
-            <img src="scott.jpg" alt="Scotty Sherman — stand-up comedian" />
-            <div class="photoBadge"><b>SCOTTY</b> • LIVE • NEW HOPE</div>
-          </div>
-
-          <div id="contact" class="contact">
-            <label>Book Scotty (Email)</label>
-
-            <!-- Simple mailto form (no backend required) -->
-            <form class="contactForm" action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
-              <input class="field" name="name" placeholder="Your name" required />
-              <input class="field" name="email" type="email" placeholder="Your email" required />
-              <input class="field" name="subject" placeholder="Subject (Booking / Event / Collab)" />
-              <textarea class="field" name="message" rows="4" placeholder="Tell us the date, venue, pay, and vibe." required></textarea>
-              <button class="btn primary send" type="submit">Send Booking Request</button>
-            </form>
-
-            <div class="footer">
-              Swap YOUR_EMAIL_HERE@example.com with the real booking email.
-            </div>
-          </div>
+        <div class="photo">
+          <!-- IMAGE FIXED: matches repo exactly -->
+          <img src="./lovablescott.jpeg" alt="Scotty Sherman stand-up comedian" />
+          <div class="badge"><b>SCOTTY</b> • LIVE • NEW HOPE</div>
         </div>
       </div>
+
     </section>
 
-    <div class="footer" style="margin-top:18px;">
-      © <span id="year"></span> Scotty Sherman • Built loud on purpose.
+    <div id="contact" class="footer">
+      Booking: replace this section or add mailto later.
     </div>
+
+    <div class="footer">
+      © <span id="year"></span> Scotty Sherman
+    </div>
+
   </div>
 
   <script>
@@ -515,4 +204,3 @@ Replace scott.jpg with your real photo filename (same folder) OR paste an image 
   </script>
 </body>
 </html>
-
